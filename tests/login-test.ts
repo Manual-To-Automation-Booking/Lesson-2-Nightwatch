@@ -1,5 +1,3 @@
-import { Done } from "mocha";
-
 describe('Practice Login Tests', function() {
     // This will be run before each test suite is started
   
@@ -7,7 +5,7 @@ describe('Practice Login Tests', function() {
         browser.navigateTo('https://practicetestautomation.com/practice-test-login/');
     });
 
-    it('Perform a Successful Login', function(browser: Done) {
+    it('Perform a Successful Login', function(browser) {
         var username: String = "student";
         var password: String = "Password123";
 
@@ -34,8 +32,8 @@ describe('Practice Login Tests', function() {
     }); 
 
   it('Failed Login based on username', function(browser) {
-      var wrongUsername = "wrongStudent";
-      var correctPassword = "Password123";
+      var wrongUsername: String = "wrongStudent";
+      var correctPassword: String = "Password123";
 
       browser
           .waitForElementVisible({
@@ -60,8 +58,8 @@ describe('Practice Login Tests', function() {
   }); 
 
   it('Failed Login based on password', function(browser) {
-      var correctUsername = "student";
-      var wrongPassword = "Password321";
+      var correctUsername: String = "student";
+      var wrongPassword: String = "Password321";
 
       browser
           .waitForElementVisible({
